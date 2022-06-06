@@ -1,0 +1,14 @@
+.App {
+  &__exportButton {
+    width: 100%;
+  }
+
+  &__preview {
+    display: flex;
+    padding: 10px 0;
+  }
+
+  &__jsxList {
+    margin-right: 5px;
+  }
+}
