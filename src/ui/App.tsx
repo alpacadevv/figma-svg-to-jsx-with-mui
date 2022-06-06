@@ -7,7 +7,7 @@ import ListItem from './components/ListItem';
 import CodeBlock from './components/CodeBlock';
 import { createUIMessage } from './utils';
 import svgToJSX from './apis/svgToJSX';
-import type { JSXInfo } from '../../types';
+import type { JSXInfo } from '../types';
 import { MessageInitializeMain, MessageInitializeUIData } from '../types';
 import generateJSXIndexFile from './utils/generateJSXIndexFile';
 

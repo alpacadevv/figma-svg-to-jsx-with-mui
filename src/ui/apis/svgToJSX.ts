@@ -1,5 +1,5 @@
 import { API_BASE_URL } from '../../env.config';
-import type { JSXInfo } from '../../../types';
+import type { JSXInfo } from '../../types';
 
 interface SVGToJSXParams {
   svgInfos: { name: string; svg: string }[];

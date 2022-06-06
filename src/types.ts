@@ -17,3 +17,14 @@ export interface MessageInitializeUI {
   type: 'initialize-ui';
   data: MessageInitializeUIData[];
 }
+
+export interface SVGInfo {
+  name: string;
+  svg: string;
+}
+
+export interface JSXInfo {
+  name: string;
+  svg: string;
+  jsx: string;
+}
