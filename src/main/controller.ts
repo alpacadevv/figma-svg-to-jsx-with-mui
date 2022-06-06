@@ -16,7 +16,7 @@ figma.ui.onmessage = async (message) => {
       const name = selectionScene[i].name;
       const svg = ab2str(svgAsUnit8Array);
       svgInfos.push({
-        name,
+        name: name.replace(/(\s*)/g, ''),
         svg,
       });
 
