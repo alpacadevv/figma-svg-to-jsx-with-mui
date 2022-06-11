@@ -1,5 +1,5 @@
 import { MessageInitializeUI, MessageInitializeUIData } from '../types';
-import { createMessage } from '../utils';
+import { createMessage, checkSpecial } from '../utils';
 
 figma.showUI(__html__, { width: 600, height: 500 });
 
@@ -13,10 +13,16 @@ figma.ui.onmessage = async (message) => {
       const svgAsUnit8Array = await selectionScene[i].exportAsync({
         format: 'SVG',
       });
-      const name = selectionScene[i].name;
+
+      let name = selectionScene[i].name.replace(/(\s*)/g, '');
+
+      if (checkSpecial(name)) {
+        name = `Icon${i}`;
+      }
+
       const svg = ab2str(svgAsUnit8Array);
       svgInfos.push({
-        name: name.replace(/(\s*)/g, ''),
+        name,
         svg,
       });
 
